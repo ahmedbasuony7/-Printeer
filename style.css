@@ -1,0 +1,50 @@
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+    .content {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        page-break-after: always;
+    }
+    /* Landscape */
+    @page {
+        size: A4;
+    }
+}
+
+/* Orientation styles based on user input */
+.portrait {
+    width: 100%;
+    height: auto;
+}
+
+.landscape {
+    width: auto;
+    height: 100%;
+}
+
+body {
+    background-color: rgb(51, 51, 51);
+    color: rgb(218, 214, 214);
+    margin: 20px;
+}
+
+/* Print preview section */
+.print-preview {
+    border: 2px solid #000;
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
+}
+
+.color-mode {
+    color: black;
+}
+
+.mono {
+    color: gray;
+}

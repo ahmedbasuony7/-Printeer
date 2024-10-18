@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Printr </title>
+
+    <!--  css libk    -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!--   normalize  -->
+    <link rel="stylesheet" href="../New folder/normalise.css">
+
+    <!--   all  min --> 
+    <link rel="stylesheet" href="../New folder/all.min.css">
+
+</head>
+<body>
+
+
+
+    <div  class=""  style=" ">
+        <form id="print-settings-form">
+
+            <div  class="holder" >
+                <div  class="header"   style="display: flex; margin: 20px; justify-content: space-between ;  align-items: center;">
+                    <p> Print </p>
+                    <p> 4 sheets of paper </p>
+                </div>
+            </div> 
+        
+            
+            <div  style="display: flex; margin:0px 20px; justify-content: space-between; align-items: center;">
+                <label for="type"> Destination :</label>
+                <select id="type" 
+                    style="background-color: rgb(51, 51, 51);  padding: 9px 10px ; color: rgb(218, 214, 214); border: 1px solid  rgb(218, 214, 214); border-radius: 10px; font-size: 15px;  width: 220px;  outline: none;"
+                >
+                    <option value=" Microsoft Print To Pdf"> <i class="fa-solid fa-print"></i>  Microsoft Print To Pdf</option>
+                    <option value=" Microsoft Print To Word">   Microsoft Print To Word </option>
+                </select>
+            </div>
+            <br>
+
+            
+            <div  style="display: flex; margin: 0px 20px; justify-content: space-between; align-items: center;">
+                <label for="paperSize">Pages:</label>
+                <select id="paperSize"
+                style="background-color: rgb(51, 51, 51);  padding: 9px 10px ; color: rgb(218, 214, 214); border: 1px solid  rgb(218, 214, 214); border-radius: 10px; font-size: 15px;  width: 220px;  outline: none;"
+                >
+                    <option value="A4">All</option>
+                    <option value="A4">A4</option>
+                    <option value="A3">A3</option>
+                    <option value="A5">A5</option>
+                    <option value="legal">Legal</option>
+                    <option value="letter">Letter</option>
+                </select>
+            </div>
+            <br>
+
+
+
+            <div  style="display: flex; margin:0px 20px; justify-content: space-between; align-items: center;">
+                <label for="orientation"> Layout  </label>
+                <select id="orientation" 
+                    style="background-color: rgb(51, 51, 51);  padding: 9px 10px ; color: rgb(218, 214, 214); border: 1px solid  rgb(218, 214, 214); border-radius: 10px; font-size: 15px;  width: 220px;  outline: none;"
+                >
+                    <option value="portrait">Portrait</option>
+                    <option value="landscape">Landscape</option>
+                </select>
+            </div>
+            <br>
+        
+
+            <div  style="display: flex; margin:0px 20px; justify-content: space-between; align-items: center;">
+                <label for="colorMode">Color </label>
+                <select id="colorMode"
+                    style="background-color: rgb(51, 51, 51);  padding: 9px 10px ; color: rgb(218, 214, 214); border: 1px solid  rgb(218, 214, 214); border-radius: 10px; font-size: 15px;  width: 220px;  outline: none;"
+                >
+                    <option value="color"> black and white </option>
+                    <option value="mono">Mono</option>
+                </select>
+            </div>
+            <br>
+            <br>
+
+
+            <div  style="display: flex; margin:0px 20px;  justify-content: space-between; align-items: center;">
+                <select id="colorMode"
+                    style="background-color: rgb(51, 51, 51);  padding: 12px 10px ; color: rgb(218, 214, 214); border: 1px solid  rgb(72, 71, 71); border-radius: 10px; font-size: 15px;  width: 330px;  outline: none;"
+                >
+                    <option value="color">  more Setting  </option>
+                </select>
+            </div>
+        
+            <div style="position: relative; margin: 20px;" >
+                <button type="button" onclick="applySettings()" 
+                    style="position: absolute; background-color: rgb(51, 51, 51); padding: 9px 15px;  color:rgb(218, 214, 214) ; font-size: 16px; border: 1px solid rgb(218, 214, 214);  border-radius: 30px; " 
+                >
+                    Preview
+                </button>
+
+                <button type="button" onclick="window.print()"  
+                    style="position: absolute; left: 50%; background-color: rgb(51, 51, 51); padding: 9px 17px; margin-top: 180px;
+                    color:rgb(218, 214, 214) ; font-size: 16px; border: 1px solid rgb(218, 214, 214);  border-radius: 30px; " 
+                >
+                    Print
+                </button>
+
+                <button type="button" onclick="window.location.reload()"  
+                    style="position: absolute; left: 75%; background-color: rgb(51, 51, 51); padding: 9px 17px; margin-top: 180px;
+                    color:rgb(218, 214, 214) ; font-size: 16px; border: 1px solid rgb(218, 214, 214);  border-radius: 30px; " 
+                >
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="print-preview">
+        <h2>Print Preview</h2>
+        <div id="content-preview" class="content">This is the content to be printed.</div>
+    </div>
+
+<script src="./main.js">
+    
+</script>
+
+</body>
+</html>
